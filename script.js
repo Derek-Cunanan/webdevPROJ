@@ -21,23 +21,33 @@ document.getElementById("btnRegister").addEventListener("click", async (event) =
         console.error(error);
     }
 })
-
-document.getElementById("login").addEventListener("submit", async (event) => {
+const login = document.getElementById("login")
+login.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const userName = usernameInput.value;
-    const password = passwordInput.value;
+    const loginForm = new FormData(login)
 
     try {
         const response = await fetch("http://127.0.0.1:3000/api/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             credentials: "include",
-            body: JSON.stringify({ username: userName, password}),
+            body: JSON.stringify({ 
+                username: loginForm.get("name"), 
+                password: loginForm.get("password")}),
         })
 
         const result = await response.json();
-        document.getElementById("lblLogin").textContent = result.message;
+
+        if (result.ok === true){
+            document.getElementById("lblLogin").textContent = result.message;
+            localStorage.setItem("userId", result.userId)
+            window.location.href = "/frontend/main.html"
+        }
+        else{
+            document.getElementById("lblLogin").textContent = result.message;
+        }
     } catch (error) {
         console.error(error);
     }
 })
+

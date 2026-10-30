@@ -14,3 +14,4 @@ const usersChema = new mongoose.Schema({
 const user = mongoose.model("user", usersChema)
 
 module.exports = user
+

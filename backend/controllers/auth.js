@@ -49,7 +49,7 @@ const login = async (req, res) => {
             return res.json({
                 message: "Login Success",
                 ok: true,
-                userId: req.session.userId
+                userId: currUser._id
             })
         } else {
             return res.json({
