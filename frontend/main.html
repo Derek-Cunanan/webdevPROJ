@@ -5,40 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Motorpool System</title>
     <link rel="stylesheet" href="/stylesheet/main.css">
+    <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
 </head>
 <body>
-        <div id="dashboard-container">
-            <div id="dashboard-content">
-                <h1 style="text-align: center;;">Welcome to the Vehicle Motorpool System</h1>
-                <nav id="navbar">
-                    <a href="/frontend/main.html">Dashboard</a>
-                    <a href="/frontend/viewVehicles.html">View Vehicles</a>
-                    <a href="">View Trips</a>
-                    <a href="">View Maintenance</a>
-                </nav>
-                <h3 style="margin-left: 20px;">Dashboard</h3>
-                <p style="margin-left: 20px;">This is the main dashboard for the Vehicle Motorpool System.</p>
-                <div id="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <h2>Total Vehicles:</h2>
-                    </div>
-                    <div class="dashboard-card">
-                        <h2>Available Vehicles:</h2>
-                    </div>
-                    <div class="dashboard-card">
-                        <h2>Vehicles in use:</h2>
-                    </div>
-                    <div class="dashboard-card">
-                        <h2>On maintenance:</h2>
-                    </div>
-                    <div class="dashboard-card">
-                        <h2>Pending maintenance:</h2>
-                    </div>
-                    <div class="dashboard-card">
-                        <h2>Ongoing trips:</h2>
-                    </div>
+    <div id="dashboard-container">
+        <div id="info-card-container">
+            <div class="info-cards">Available Vehicles</div>
+            <div class="info-cards">Vehicles in Use</div>
+            <div class="info-cards">Under Maintenance</div>
+            <div class="info-cards">Pending Requests</div>
+        </div>
+        <div id="table-container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Status</th>
+                        <th>Maintenance</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>dwadadw</td>
+                        <td>dawdadwa</td>
+                        <td>dwadwa</td>
+                        <td>dwada</td>
+                    </tr>
+                    <tr>
+                        <td>dwadadw</td>
+                        <td>dawdadwa</td>
+                        <td>dwadwa</td>
+                        <td>dwada</td>
+                    </tr>
+                    <tr>
+                        <td>dwadadw</td>
+                        <td>dawdadwa</td>
+                        <td>dwadwa</td>
+                        <td>dwada</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="request-table">
+                <div class="request-card">
+                    <p>Driver Name:</p>
+                    <p>Requested Vehicle:</p>
+                </div>
+                <div class="request-card">
+                    <p>Driver Name:</p>
+                    <p>Requested Vehicle:</p>
+                </div>
+                <div class="request-card">
+                    <p>Driver Name:</p>
+                    <p>Requested Vehicle:</p>
                 </div>
             </div>
         </div>
+        <button id="navToggle"><img src="../assets/toggle.png" alt="img"></button>
+        <nav id="navbar" class="open">
+            <a href="/frontend/main.html">Dashboard</a>
+            <a href="/frontend/viewVehicles.html">View Vehicles</a>
+            <a href="">View Trips</a>
+            <a href="">View Maintenance</a>
+        </nav>
+    </div>
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const navbar = document.getElementById("navbar");
+        toggle.addEventListener("click", () => navbar.classList.toggle("open"));
+    </script>
 </body>
 </html>

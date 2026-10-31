@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System | Maintenance</title>
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body>
+
+    <button id="navToggle">
+        <img src="assets/toggle.png" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html" class="active">Maintenance</a>
+    </nav>
+
+    <main class="content">
+        <header class="page-header">
+            <h1>Maintenance Records</h1>
+            <p>Monitor vehicle inspections, repairs, and maintenance schedules.</p>
+        </header>
+
+        <section class="info-card-container vehicle-stats">
+            <div class="info-card">
+                <h3>Total Records</h3>
+                <h2>12</h2>
+            </div>
+            <div class="info-card">
+                <h3>In Progress</h3>
+                <h2>2</h2>
+            </div>
+            <div class="info-card">
+                <h3>Completed</h3>
+                <h2>8</h2>
+            </div>
+            <div class="info-card">
+                <h3>Scheduled</h3>
+                <h2>2</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Maintenance List</h2>
+                    <p>Vehicle repair and inspection history.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Maintenance ID</th>
+                            <th>Vehicle</th>
+                            <th>Maintenance Type</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M001</td>
+                            <td>Toyota HiAce</td>
+                            <td>Engine Check</td>
+                            <td>Oct. 30, 2026</td>
+                            <td><span class="status maintenance">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>M002</td>
+                            <td>Isuzu D-Max</td>
+                            <td>Oil Change</td>
+                            <td>Oct. 28, 2026</td>
+                            <td><span class="status available">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>M003</td>
+                            <td>Toyota Hilux</td>
+                            <td>Brake Inspection</td>
+                            <td>Nov. 02, 2026</td>
+                            <td><span class="status scheduled">Scheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>Vehicle Motorpool System © 2026</footer>
+    </main>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>

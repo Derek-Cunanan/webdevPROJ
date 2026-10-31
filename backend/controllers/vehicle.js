@@ -13,6 +13,8 @@ const addVehicle = async (req,res) => {
         }
 
         const addVehicle = new vehicle({
+            plateNo: req.body.plateNo,
+            odoMeter: req.body.odoMeter,
             brand: req.body.brand,
             type: req.body.type,
             status: req.body.status,
@@ -56,10 +58,50 @@ const getVehicle = async (req,res) => {
         })
     }
     
+const updateVehicle = async (req, res) => {
+    try{
+        const currVehicle = await vehicle.findOne({_id: req.params.id})
 
+        currVehicle.plateNo = req.body.plateNo
+        currVehicle.odoMeter = req.body.odoMeter
+        currVehicle.brand = req.body.brand
+        currVehicle.type = req.body.type
+        currVehicle.status = req.body.status
+        currVehicle.maintenanceDate = req.body.maintenanceDate
+
+        await currVehicle.save()
+
+        res.json({
+            message: "Vehicle Updated",
+            ok: false
+        })
+    }
+    catch{
+        res.json({
+            message: "Something went wrong",
+            ok: false
+        })
+    }
+}
+
+const deleteVehicle = async (req,res) => {
+    try{
+        await vehicle.findByIdAndDelete(req.params.id)
+        res.json({
+            message: "deleted",
+            ok: true
+        })
+    }
+    catch{
+        res.json({
+            message: "Something went wrong",
+            ok: false
+        })
+    }
+}   
     
 }
 
-module.exports = { addVehicle }
+module.exports = { addVehicle, getVehicle, updateVehicle, deleteVehicle }
 
 

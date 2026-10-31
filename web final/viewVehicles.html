@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System | Vehicles</title>
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body>
+
+    <button id="navToggle">
+        <img src="assets/toggle.png" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html" class="active">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main class="content">
+        <header class="page-header">
+            <h1>Vehicle Records</h1>
+            <p>View and monitor all registered motorpool vehicles.</p>
+        </header>
+
+        <section class="info-card-container vehicle-stats">
+            <div class="info-card">
+                <h3>Total Vehicles</h3>
+                <h2>24</h2>
+            </div>
+            <div class="info-card">
+                <h3>Available</h3>
+                <h2>18</h2>
+            </div>
+            <div class="info-card">
+                <h3>In Use</h3>
+                <h2>4</h2>
+            </div>
+            <div class="info-card">
+                <h3>Maintenance</h3>
+                <h2>2</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Vehicle List</h2>
+                    <p>List of registered vehicles and their current status.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Vehicle Name</th>
+                            <th>Plate Number</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>V001</td>
+                            <td>Toyota Hilux</td>
+                            <td>ABC 1234</td>
+                            <td>Pickup</td>
+                            <td><span class="status available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>V002</td>
+                            <td>Mitsubishi L300</td>
+                            <td>DEF 5678</td>
+                            <td>Van</td>
+                            <td><span class="status in-use">In Use</span></td>
+                        </tr>
+                        <tr>
+                            <td>V003</td>
+                            <td>Toyota HiAce</td>
+                            <td>GHI 9012</td>
+                            <td>Van</td>
+                            <td><span class="status maintenance">Maintenance</span></td>
+                        </tr>
+                        <tr>
+                            <td>V004</td>
+                            <td>Isuzu D-Max</td>
+                            <td>JKL 3456</td>
+                            <td>Pickup</td>
+                            <td><span class="status available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>V005</td>
+                            <td>Toyota Innova</td>
+                            <td>MNO 7890</td>
+                            <td>SUV</td>
+                            <td><span class="status in-use">In Use</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>Vehicle Motorpool System © 2026</footer>
+    </main>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>

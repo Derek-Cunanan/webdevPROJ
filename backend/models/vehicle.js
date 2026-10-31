@@ -1,6 +1,14 @@
 const mongoose = require("mongoose")
 
 const vehicleSchema = new mongoose.Schema({
+    plateNo: {
+        type: String,
+        require: true
+    },
+    odoMeter: {
+        type: Number,
+        required: true
+    },
     brand:{
         type: String,
         required: true
@@ -9,6 +17,10 @@ const vehicleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    maintenanceDate: {
+        type: Date
+        required: true
+    }
     status:{
         type: String,
         required: true,

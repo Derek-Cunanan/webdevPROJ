@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System | Trips</title>
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body>
+
+    <button id="navToggle">
+        <img src="assets/toggle.png" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html" class="active">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main class="content">
+        <header class="page-header">
+            <h1>Trip Records</h1>
+            <p>View and monitor vehicle trip schedules and history.</p>
+        </header>
+
+        <section class="info-card-container vehicle-stats">
+            <div class="info-card">
+                <h3>Total Trips</h3>
+                <h2>32</h2>
+            </div>
+            <div class="info-card">
+                <h3>Ongoing Trips</h3>
+                <h2>4</h2>
+            </div>
+            <div class="info-card">
+                <h3>Completed Trips</h3>
+                <h2>25</h2>
+            </div>
+            <div class="info-card">
+                <h3>Scheduled Trips</h3>
+                <h2>3</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Trip List</h2>
+                    <p>Recorded vehicle trips and destinations.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Trip ID</th>
+                            <th>Vehicle</th>
+                            <th>Driver</th>
+                            <th>Destination</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>T001</td>
+                            <td>Toyota Hilux</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>Tarlac City</td>
+                            <td>Oct. 30, 2026</td>
+                            <td><span class="status in-use">Ongoing</span></td>
+                        </tr>
+                        <tr>
+                            <td>T002</td>
+                            <td>Mitsubishi L300</td>
+                            <td>Pedro Santos</td>
+                            <td>Capas</td>
+                            <td>Oct. 29, 2026</td>
+                            <td><span class="status available">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>T003</td>
+                            <td>Isuzu D-Max</td>
+                            <td>Mark Reyes</td>
+                            <td>Concepcion</td>
+                            <td>Oct. 31, 2026</td>
+                            <td><span class="status scheduled">Scheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>Vehicle Motorpool System © 2026</footer>
+    </main>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>

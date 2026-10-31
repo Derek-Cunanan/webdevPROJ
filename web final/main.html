@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System | Dashboard</title>
+    <style>
+    body {
+        background-color: #151922;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+    <button id="navToggle">
+        <img src="assets/toggle.png" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+        <a href="main.html" class="active">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main class="content">
+        <header class="page-header">
+            <h1>Dashboard</h1>
+            <p>Welcome to the Vehicle Motorpool Management System.</p>
+        </header>
+
+        <section class="info-card-container">
+            <div class="info-card">
+                <span class="card-icon">🚘</span>
+                <h3>Total Vehicles</h3>
+                <h2>24</h2>
+                <p>Registered vehicles</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-icon">✓</span>
+                <h3>Available Vehicles</h3>
+                <h2>18</h2>
+                <p>Ready for use</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-icon">↗</span>
+                <h3>Ongoing Trips</h3>
+                <h2>4</h2>
+                <p>Currently on the road</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-icon">🔧</span>
+                <h3>For Maintenance</h3>
+                <h2>2</h2>
+                <p>Under inspection or repair</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Quick Access</h2>
+                    <p>Manage your motorpool records.</p>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <a href="viewVehicles.html">
+                    <span>🚘</span>
+                    <div>
+                        <h3>View Vehicles</h3>
+                        <p>Check vehicle information and status.</p>
+                    </div>
+                    <b>→</b>
+                </a>
+
+                <a href="viewTrips.html">
+                    <span>📋</span>
+                    <div>
+                        <h3>View Trips</h3>
+                        <p>Monitor vehicle trips and schedules.</p>
+                    </div>
+                    <b>→</b>
+                </a>
+
+                <a href="maintenance.html">
+                    <span>🔧</span>
+                    <div>
+                        <h3>Maintenance</h3>
+                        <p>Review vehicle repair records.</p>
+                    </div>
+                    <b>→</b>
+                </a>
+            </div>
+        </section>
+
+        <footer>Vehicle Motorpool System © 2026</footer>
+    </main>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>
