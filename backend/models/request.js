@@ -8,7 +8,7 @@ const requestSchema = mongoose.Schema({
     },
     vehicle: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: vehicle,
+        ref: "vehicle",
         required: true
     },
     distance: {

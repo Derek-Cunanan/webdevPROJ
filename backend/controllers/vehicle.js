@@ -57,6 +57,7 @@ const getVehicle = async (req,res) => {
             ok: false
         })
     }
+}
     
 const updateVehicle = async (req, res) => {
     try{
@@ -98,10 +99,7 @@ const deleteVehicle = async (req,res) => {
             ok: false
         })
     }
-}   
-    
 }
 
 module.exports = { addVehicle, getVehicle, updateVehicle, deleteVehicle }
-
 

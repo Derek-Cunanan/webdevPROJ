@@ -18,9 +18,9 @@ const vehicleSchema = new mongoose.Schema({
         required: true
     },
     maintenanceDate: {
-        type: Date
+        type: Date,
         required: true
-    }
+    },
     status:{
         type: String,
         required: true,
