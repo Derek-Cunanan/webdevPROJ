@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "Garet";
+    src: url("../assits/fonts/Garet-Book.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E5E7EB;
+    color: #181818;
+    font-family: Garet, Arial, sans-serif;
+}
+
+/* Navigation Toggle */
+
+#navToggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    background-color: #1A1A1A;
+    border: 1px solid #303744;
+    border-radius: 8px;
+    padding: 11px;
+    cursor: pointer;
+}
+
+#navToggle img {
+    width: 23px;
+    height: 23px;
+    display: block;
+    filter: invert(1);
+}
+
+/* Sidebar Navigation */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 85px 18px 20px;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-right: 1px solid #303744;
+}
+
+#navbar.open {
+    transform: translateX(0);
+}
+
+#navbar h2 {
+    font-size: 17px;
+    margin: 15px 12px 30px;
+    letter-spacing: 1px;
+}
+
+#navbar a {
+    padding: 16px 18px;
+    margin-bottom: 9px;
+    color: #B8BEC9;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    background-color: #607D9B;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+
+
+.cards{
+    margin-top: 30px;
+    width: 100vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 120px;
+    min-width: 250px;
+    border: solid 1px #797e86;
+}
+
+.cardLabel{
+    color: #222;
+    margin-bottom: 0;
+}
+.cardNum{
+    color: #222;
+    font-weight: 500;
+    font-size: 50px;
+    margin: 0;
+}
+
+.tableRequest{
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    gap: 2vw;
+}
+table{
+    border: solid 1px #797e86;
+    border-radius: 5px;
+    border-collapse: 0;
+    border-spacing: 0;
+    padding: 5px;
+}
+#theaderRow{
+    background-color: rgb(170, 169, 169);
+    border-radius: 10px;
+
+}
+th{
+    width: 13vw;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    border-bottom: solid 1px #797e86;
+}
+#firstChild {
+  border-radius: 5px 0 0 0;
+}
+
+#lastChild {
+  border-radius: 0 5px 0 0;
+}
+td{
+    width: 13vw;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    border-bottom: solid 1px #797e86;
+}
+
+.requestContainer{
+    width: 20vw;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+#requestHeader{
+    margin: 0;
+    padding-bottom: 2px;
+    border-bottom: solid 1px gray;
+}
+.request{
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+.requestTitle{
+    margin: 5px;
+    font-size: 17px;
+}
+.requestPurpose{
+    margin: 5px;
+    font-size: 14px;
+}
+
+.requestAcceptBtn{
+    height: 4vh;
+    width: 5vw;
+    color: white;
+    background-color: black;
+    border: none;
+}
+.requestRejectBtn{
+    height: 4vh;
+    width: 5vw;
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 226, 226);
+    border: solid 1px black;
+}
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+    .info-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 75px 20px 25px;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .info-card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Garet";
+    src: url("../assits/fonts/Garet-Book.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #576072;
+    color: #F2F3F5;
+    font-family: "Garet", Arial, sans-serif;
+}
+
+/* SIDEBAR BUTTON */
+
+#navToggle {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1100;
+    background-color: #1A1D24;
+    border: 1px solid #353B46;
+    border-radius: 9px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#navToggle:hover {
+    background-color: #607D9B;
+}
+
+#navToggle img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    filter: invert(1);
+}
+
+/* SIDEBAR */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 70px 12px 15px;
+    background-color: #191C23;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 1000;
+    border-right: 1px solid #343A45;
+}
+
+#navbar.open {
+    transform: translateX(0);
+}
+
+#navbar h2 {
+    font-size: 15px;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+    color: #829DBB;
+}
+
+#navbar a {
+    padding: 16px 20px;
+    margin-bottom: 5px;
+    color: #D5D9E0;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    background-color: #607D9B;
+    color: white;
+}
+
+/* REQUEST PAGE */
+
+.request-page {
+    width: 90%;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 35px 40px;
+    background-color: #2D323D;
+    border: 1px solid #414957;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.request-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #454B57;
+}
+
+.request-header h2 {
+    font-size: 24px;
+    color: #F5F6F8;
+    margin-bottom: 10px;
+}
+
+.request-header p {
+    font-size: 13px;
+    color: #AEB7C5;
+}
+
+/* FORM */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #DCE2EA;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background-color: #20242D;
+    border: 1px solid #414957;
+    border-radius: 10px;
+    padding: 14px 17px;
+    color: #F5F6F8;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #718BA9;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #829DBB;
+    box-shadow: 0 0 0 3px rgba(96, 125, 155, 0.15);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #929BA9;
+}
+
+.form-group select option {
+    background-color: #20242D;
+    color: white;
+}
+
+/* DATE AND TIME */
+
+.date-time-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
+}
+
+/* BUTTONS */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #454B57;
+}
+
+.form-buttons button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.clear-button {
+    background-color: #414752;
+    color: #E3E6EB;
+}
+
+.submit-button {
+    background-color: #607D9B;
+    color: white;
+}
+
+.clear-button:hover {
+    background-color: #535B68;
+}
+
+.submit-button:hover {
+    background-color: #7896B5;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .request-page {
+        width: 92%;
+        margin: 75px auto 25px;
+        padding: 25px 20px;
+    }
+
+    .request-header h2 {
+        font-size: 20px;
+    }
+
+    .date-time-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+}

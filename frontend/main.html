@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System</title>
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
+</head>
+<body>
+
+    <button id="navToggle">
+        <img src="../assits/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+        <a href="main.html" class="active">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="driverRequest.html">Driver Requests</a>
+        <label for="name" style="color: #B8BEC9;">Add Driver:</label>
+        <input type="text" id="driverName" name="driverName">
+        <button type="submit" id="submitDriver">ADD</button>
+    </nav>
+
+    <main class="content">
+        <div class="cards">
+            <div class="card">
+                <div>
+                    <p class="cardLabel">Available Vehicles: </p>
+                    <p class="cardNum" id="numAvail">0</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <p class="cardLabel">In use: </p>
+                    <p class="cardNum" id="numUnavail">0</p>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <p class="cardLabel">Under Maintenance: </p>
+                    <p class="cardNum">0</p>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <p class="cardLabel">Pending request: </p>
+                    <p class="cardNum">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="tableRequest">
+            <div>
+            <table id="vehicleTable">
+                <thead>
+                    <tr id="theaderRow">
+                        <th id="firstChild">Vechicle</th>
+                        <th>Driver</th>
+                        <th>Status</th>
+                        <th id="lastChild">Plate No.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+                <div class="chart">
+
+                </div>
+            </div>
+            <aside class="requestContainer">
+                <p id="requestHeader">Pending Request</p>
+                <div class="request">
+                    <p class="requestTitle">[driver]-[vehicle]</p>
+                    <p class="requestPurpose">[purpose]-[date]</p>
+                    <div>
+                        <button class="requestAcceptBtn">Accept</button>
+                        <button class="requestRejectBtn">Reject</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+</html>
